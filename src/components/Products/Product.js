@@ -23,15 +23,14 @@ const Product = () => {
       <ThemeProvider theme={theme}>
         <Paper
           sx={{
-            pt: 2,
-            pb: 2,
-            bgcolor: "primary.bluegray",
-            px: 10,
-            borderRadius: "0px",
+            display: "flex",
+            justifyContent: "space-around",
+            pb: 3,
+            pt: 3,
           }}
           elevation={6}
         >
-          <Grid container spacing={2} justify="center">
+          <Grid container columnSpacing={-30} rowSpacing={2}>
             {cardData.map((product) => {
               return (
                 <Grid item key={product.id} xs={12} sm={6} md={4} lg={4}>
