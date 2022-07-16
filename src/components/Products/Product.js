@@ -1,9 +1,10 @@
-import { Paper, Grid } from "@mui/material";
+import { Paper, Grid, Typography } from "@mui/material";
 import React from "react";
 import cardData from "./ProductData";
 import Products from "./Product/Products";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Box } from "@mui/system";
 
 const theme = createTheme({
   palette: {
@@ -23,28 +24,39 @@ const Product = () => {
       <ThemeProvider theme={theme}>
         <Paper
           sx={{
-            display: "flex",
-            justifyContent: "space-around",
             pb: 3,
-            pt: 3,
+            pt: 2,
           }}
-          elevation={6}
         >
-          <Grid container columnSpacing={-30} rowSpacing={2}>
-            {cardData.map((product) => {
-              return (
-                <Grid item key={product.id} xs={12} sm={6} md={4} lg={4}>
-                  <Products
-                    id={product.id}
-                    title={product.title}
-                    content={product.content}
-                    price={product.price}
-                    src={product.src}
-                  />
-                </Grid>
-              );
-            })}
-          </Grid>
+          <Typography
+            variant="h5"
+            sx={{
+              px: 15,
+              pb: 2,
+              textTransform: "capitalize",
+              display: "flex",
+              justifyContent: "Center",
+            }}
+          >
+            Featured Product
+          </Typography>
+          <Box style={{ display: "flex", justifyContent: "space-around" }}>
+            <Grid container columnSpacing={2} rowSpacing={2}>
+              {cardData.map((product) => {
+                return (
+                  <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
+                    <Products
+                      id={product.id}
+                      title={product.title}
+                      content={product.content}
+                      price={product.price}
+                      src={product.src}
+                    />
+                  </Grid>
+                );
+              })}
+            </Grid>
+          </Box>
         </Paper>
       </ThemeProvider>
     </>

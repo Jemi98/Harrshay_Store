@@ -48,6 +48,22 @@ const cardData = [
     src: require("../../assets/img6.jpg"),
     price: 500,
   },
+  {
+    id: uuid(),
+    title: "Macbook",
+    content:
+      "This apple product and available at store for buying at low as......",
+    src: require("../../assets/img1.jpg"),
+    price: 100,
+  },
+  {
+    id: uuid(),
+    title: "Ipad",
+    content:
+      "This apple product and available at store for buying at low as......",
+    src: require("../../assets/img2.jpg"),
+    price: 200,
+  },
 ];
 
 export default cardData;

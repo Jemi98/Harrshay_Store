@@ -28,7 +28,11 @@ const Products = ({ id, title, content, price, src }) => {
 
   return (
     <>
-      <Card sx={{ maxWidth: "370px" }}>
+      <Card
+        sx={{
+          borderRadius: "0px",
+        }}
+      >
         <CardMedia component="img" height="200px" src={src} />
         <CardContent>
           <div

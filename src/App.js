@@ -7,6 +7,7 @@ import Home from "./components/Pages/Home";
 import About from "./components/Pages/About";
 import Footer from "./components/Footer/Footer";
 import "react-toastify/dist/ReactToastify.css";
+import ProductPage from "./components/Pages/Product/ProductPage";
 
 const App = () => {
   return (
@@ -15,8 +16,9 @@ const App = () => {
         <ResponsiveAppBar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/products" element={<ProductPage />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/About" element={<About />} />
+          <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
       </BrowserRouter>
