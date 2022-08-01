@@ -16,13 +16,13 @@ import { styled } from "@mui/material/styles";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import StorefrontIcon from "@mui/icons-material/Storefront";
-const pages = ["Products", "Pricing", "Blog", "About"];
+const pages = ["Home", "Products", "Pricing", "Blog", "About"];
 let logo = "Harshayy";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
-    right: 40,
-    top: 13,
+    right: 0,
+    top: -2,
     border: `2px solid ${theme.palette.background.paper}`,
     padding: "0 0px",
   },
@@ -32,7 +32,6 @@ const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const cartQuantity = useSelector((state) => state.cart.totalQuantity);
-  console.log(cartQuantity);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);

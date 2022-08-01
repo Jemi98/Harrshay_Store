@@ -30,7 +30,7 @@ const Products = ({ id, title, content, price, src }) => {
     <>
       <Card
         sx={{
-          borderRadius: "0px",
+          borderRadius: "10px",
         }}
       >
         <CardMedia component="img" height="200px" src={src} />

@@ -1,0 +1,22 @@
+.imgg {
+  max-height: 350px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 30px 30px 200px 60px;
+}
+
+.button {
+  border-radius: 5px;
+  bottom: 40%;
+  left: -400px;
+  transform: translateY(-60%);
+  z-index: 99;
+}
+.text {
+  color: white;
+  position: relative;
+  bottom: 60%;
+  left: -400px;
+  transform: translateY(-60%);
+  z-index: 99;
+}

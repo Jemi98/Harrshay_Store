@@ -31,9 +31,11 @@ const Footer = () => {
     <ThemeProvider theme={theme}>
       <Divider />
       <Box
+        position="sticky"
         sx={{
+          bgcolor: "text.primary",
           pb: 1,
-          bgcolor: "primary.main",
+          color: "primary.main",
           borderRadius: "0px",
         }}
         className={classess.footer}
@@ -41,6 +43,8 @@ const Footer = () => {
         <Box
           width="auto"
           sx={{
+            color: "primary.main",
+            borderRadius: "0px",
             mb: 4,
             pt: 4,
             mx: 2,
@@ -55,9 +59,10 @@ const Footer = () => {
             variant="outlined"
             placeholder="Subscribe here by e-mail"
             InputProps={{
+              style: { color: "white", borderColor: "white" },
               endAdornment: (
                 <IconButton>
-                  <EmailOutlined />
+                  <EmailOutlined sx={{ color: "primary.main" }} />
                 </IconButton>
               ),
             }}

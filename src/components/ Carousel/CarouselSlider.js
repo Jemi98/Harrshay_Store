@@ -113,7 +113,7 @@ const CarouselSlider = () => {
         }}
       >
         <Typography pb={3} variant="h5" fontSize="bold">
-          You may Also Like
+          You May Also Like
         </Typography>
 
         <Slider style={{ display: "flex" }} {...settings}>

@@ -1,4 +1,4 @@
-import { Paper, Typography, Divider, Grid } from "@mui/material";
+import { Paper, Typography, Divider, Grid, Box, Button } from "@mui/material";
 import React from "react";
 import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
@@ -18,37 +18,51 @@ const Cart = (props) => {
       {cartItems.length === 0 ? (
         <Typography sx={{ pt: 4 }}> Cart is Empty...</Typography>
       ) : (
-        <Grid
-          container
-          spacing={4}
-          justify="center"
+        <Box
           sx={{
-            mt: 2,
+            p: 4,
             display: "flex",
-            alignContent: "center",
-            flexDirection: "column",
+            flexDirection: "row",
+            justifyContent: "space-between",
           }}
         >
-          {cartItems.map((item) => {
-            return (
-              <Grid item>
-                <CartItem
-                  id={item.id}
-                  title={item.title}
-                  content={item.content}
-                  totalPrice={item.totalPrice}
-                  price={item.price}
-                  quantity={item.quantity}
-                  src={item.src}
-                />
-              </Grid>
-            );
-          })}
-          Grandtotal :: $
-          {cartItems
-            .reduce((acc, item) => acc + item.quantity * item.price, 0)
-            .toFixed(2)}
-        </Grid>
+          <Box>
+            {cartItems.map((item) => {
+              return (
+                <Grid item lg={12}>
+                  <CartItem
+                    id={item.id}
+                    title={item.title}
+                    content={item.content}
+                    totalPrice={item.totalPrice}
+                    price={item.price}
+                    quantity={item.quantity}
+                    src={item.src}
+                  />
+                </Grid>
+              );
+            })}
+          </Box>
+          <Box
+            sx={{
+              bgcolor: "text.primary",
+              width: "270px",
+              height: "270px",
+              color: "white",
+              borderRadius: "10px",
+            }}
+          >
+            <Grid item>
+              <Typography variant="h5" textAlign="center" pt={10} pb={10}>
+                Grandtotal - $
+                {cartItems
+                  .reduce((acc, item) => acc + item.quantity * item.price, 0)
+                  .toFixed(2)}
+              </Typography>
+              <Button variant="contained">Checkout</Button>
+            </Grid>
+          </Box>
+        </Box>
       )}
     </Paper>
   );

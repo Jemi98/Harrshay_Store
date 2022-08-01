@@ -32,7 +32,7 @@ const CartItem = ({ id, title, quantity, totalPrice, price, content, src }) => {
 
   return (
     <>
-      <Card sx={{ maxWidth: "800px", display: "flex" }} key={id}>
+      <Card sx={{ mb: 2, maxWidth: "800px", display: "flex" }} key={id}>
         <CardMedia
           component="img"
           sx={{ width: "200px", height: "200px" }}

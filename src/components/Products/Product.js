@@ -26,19 +26,23 @@ const Product = () => {
           sx={{
             pb: 3,
             pt: 2,
+            px: 2,
           }}
         >
           <Typography
             variant="h5"
             sx={{
               px: 15,
-              pb: 2,
+              pb: 1,
               textTransform: "capitalize",
               display: "flex",
               justifyContent: "Center",
             }}
           >
-            Featured Product
+            Popular collections
+          </Typography>
+          <Typography variant="body1" sx={{ pb: 2 }}>
+            Visit our shop to see amazing creations from our designers.
           </Typography>
           <Box style={{ display: "flex", justifyContent: "space-around" }}>
             <Grid container columnSpacing={2} rowSpacing={2}>

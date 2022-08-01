@@ -1,7 +1,6 @@
 import { Paper, Typography } from "@mui/material";
 import React from "react";
-
-const About = () => {
+const Pricing = () => {
   return (
     <Paper sx={{ height: "48vh" }}>
       <Typography sx={{ pt: 15 }}>Comming Soon.....</Typography>
@@ -9,4 +8,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Pricing;
