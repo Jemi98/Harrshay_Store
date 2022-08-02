@@ -16,7 +16,7 @@ const Cart = (props) => {
       </Typography>
       <Divider />
       {cartItems.length === 0 ? (
-        <Typography sx={{ pt: 4 }}> Cart is Empty...</Typography>
+        <Typography sx={{ pt: 15, pb: 12 }}>Cart is Empty.....</Typography>
       ) : (
         <Box
           sx={{
